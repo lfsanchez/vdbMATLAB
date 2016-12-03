@@ -25,3 +25,23 @@ end
 sumX
 toc
 end
+
+
+%% Alternative (I have been working on this same problem but I have an alternative code that works)
+
+
+function sol = spiral_diag_sum(n)
+
+a = [1];
+b = 2;
+
+while b <= n
+    for i = 1:4 
+      a = [a, (a(end)+b)];
+    end
+    b = b+2;
+end
+
+sol = sum(a,2);
+
+end
